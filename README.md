@@ -1,34 +1,98 @@
-PolluTrack – AQI Intelligence Dashboard
+# 🇮🇳 BreatheSmart — Autonomous Civic Air Intelligence
 
-PolluTrack is a full‑stack web application that visualizes real‑time Air Quality Index (AQI) data
-with city‑wise trends, pollution heatmaps, and a dual‑mode interface for Citizens and Authorities.
+> "Not a monitoring tool. An autonomous civic intelligence system that sees, predicts, acts — and speaks every Indian's language."
 
-### Features
+## What is BreatheSmart?
+
+BreatheSmart is India's first autonomous civic AI system for air quality. It doesn't just show you AQI — it automatically files complaints, dispatches trucks, alerts schools, and serves legal notices in 47 seconds. Zero humans involved.
+
+---
+
+## Features
 
 ### Citizen Mode
-- Real‑time AQI of selected city
-- Pollution status (Good / Moderate / Poor / Severe)
+- Real-time AQI of selected city
+- Pollution status — Good / Moderate / Poor / Hazardous
 - Dominant pollutant display
-- Pollutant breakdown (PM2.5, PM10, NO2, etc.)
-- Hourly AQI trend graph
-- India‑wide pollution heatmap
-- Health precautions & awareness (UI based)
+- Pollutant breakdown — PM2.5, PM10, NO2, SO2, O3, CO
+- Full 24-hour AQI trend graph with rush hour patterns
+- Health Impact Calculator — "Today = smoking 3 cigarettes"
+- Lifetime Breathe Score
+- India-wide pollution heatmap
 
 ### Authority Mode
-- City / ward‑wise pollution ranking
-- High‑risk zones highlighted
-- Clear “Action Required” indicators
-- Monitoring & decision‑support dashboard
+- City-wise pollution ranking with severity badges
+- High-risk zones highlighted with Action Required indicators
+- Auto-generated policy recommendations
+- Industrial Compliance Watchdog — flags repeat offender factories
+- Ambulance routing advisor — avoids high-AQI corridors
 
+### PollutionBot — Autonomous Civic AI Agent
+- Ward spike detected → complaint filed → truck dispatched → school alerted → legal notice served
+- 47 seconds. Zero humans. Zero delay. Zero excuse.
+- Every action logged, timestamped, publicly visible
+
+### Multilingual Voice Assistant
+- Speak in Hindi, Marathi, Gujarati, Tamil, Telugu & more
+- Ask: "Aaj bahar jaana safe hai kya?" — get instant answer in same language
+- Powered by Claude AI + Web Speech API
+
+---
 
 ## Tech Stack
-*Frontend*
-- React.js
-- Chart.js
-- React‑Leaflet (Maps)
-  
-*Backend*
-- Node.js
-- Express.js
-- AQICN (World Air Quality Index) API
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React.js, Chart.js, React-Leaflet |
+| Backend | Node.js, Express.js |
+| AQI Data | AQICN Real-Time API |
+| Maps | OpenStreetMap + CartoDB Dark |
+| Voice | Web Speech API + Claude AI |
+
+---
+
+## Setup & Installation
+
+### Backend
+cd Backend
+npm install
+node server.js
+
+Runs on http://localhost:5000
+
+### Frontend
+cd frontend
+npm install
+npm start
+
+Runs on http://localhost:3000
+
+---
+
+## Project Structure
+
+BreatheSmart/
+├── Backend/
+│   ├── server.js
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── index.js
+│   └── package.json
+└── README.md
+
+---
+
+## API Endpoints
+
+| Endpoint | Description |
+|----------|-------------|
+| GET /api/city?name=Delhi | Real-time AQI for a city |
+| GET /api/aqi-history?name=Delhi | Last 24 AQI readings |
+
+---
+
+BreatheSmart © 2025 — Every breath counted. Every second matters.
 
